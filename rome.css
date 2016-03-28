@@ -1,5 +1,5 @@
 body {
-  color: orange;
+  color: purple;
   background: black;
   font-family: arial;
 }
@@ -7,7 +7,7 @@ body {
 h1 {
   text-align: center;
   width: 100%;
-  background: orange; 
+  background: purple; 
   color: black;
 }
 
@@ -19,12 +19,12 @@ pre {
 
 #footer {
   text-align: center;
-  background: orange;
+  background: purple;
   color: black;
   width: 100%;
 }
 
 #footer a {
-  color: green;
+  color: white;
   font-weight: bold;
 }
