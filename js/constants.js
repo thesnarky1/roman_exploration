@@ -22,7 +22,7 @@ var MAP_Y_OFFSET = 1;
 var MAP_X_OFFSET = 0;
 
 var STATUSBAR_TEXT_COLOR = "black";
-var STATUSBAR_BACKGROUND_COLOR = "orange";
+var STATUSBAR_BACKGROUND_COLOR = "purple";
 
 //Constants for the end game box
 var END_GAME_BOX_WIDTH  = 40;

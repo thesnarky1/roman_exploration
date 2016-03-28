@@ -22,7 +22,7 @@ var Rome = {
       this.engine = new ROT.Engine(this.scheduler);
 
       //Make the game
-      //this.game = new Game(this.WIDTH, this.HEIGHT);
+      this.game = new Game(this.WIDTH, this.HEIGHT);
 
       //this.scheduler.add(this.game.getPlayer(), true);
       this.engine.start();
