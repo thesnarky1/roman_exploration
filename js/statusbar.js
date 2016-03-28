@@ -4,7 +4,12 @@ var StatusBar = function(game) {
 
 StatusBar.prototype.view = function() { //Removed 'game' arg from original as we already track that
   var toReturn = "%b{" + STATUSBAR_BACKGROUND_COLOR + "}%c{" + STATUSBAR_TEXT_COLOR + "}";
-  toReturn += "Test";
+  var currentPlace = this.getGame().getAtlas().getCurrentPlace();
+  if(currentPlace) { 
+    toReturn += "Current location: " + currentPlace.getName();
+  } else {
+    toReturn += "Initializing";
+  }
   toReturn += "%b{}";
   return toReturn;
 }

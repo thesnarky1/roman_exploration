@@ -3,7 +3,12 @@
 var Place = function(id) {
   this._id = id;
   this._name = "";
-  this._roads = [];
+  this._connectionss = [];
+  this._type = false;
+}
+
+Place.prototype.getType = function() {
+  return this._type;
 }
 
 Place.prototype.getID = function() {
@@ -22,6 +27,10 @@ Place.prototype.setName = function(newName) {
   this._name = newName;
 }
 
-Place.prototype.addRoad = function(newRoad) {
-  this._roads.push(newRoad);
+Place.prototype.setType = function(newType) {
+  this._type = newType;
+}
+
+Place.prototype.addConnection = function(newConnection) {
+  this._roads.push(newConnection);
 }

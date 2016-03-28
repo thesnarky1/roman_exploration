@@ -3,7 +3,6 @@ var Game = function(screenWidth, screenHeight) {
   this._screenHeight = screenHeight;
 
   this._atlas = new Atlas();
-  this._atlas.addLocation(314921);
 
   this._statusbar = new StatusBar(this);
 
@@ -24,7 +23,11 @@ Game.prototype.getPlayer = function() {
   return this._player;
 }
 
-//Should return an array of lines for Ironwood to draw
+Game.prototype.getAtlas = function() {
+  return this._atlas;
+}
+
+//Should return an array of lines for Rome to draw
 Game.prototype.display = function() {
   //Finish HIM
   return this.getStatusBar().view();
