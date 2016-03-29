@@ -1,11 +1,16 @@
-var Atlas = function(id) {
-  if(!id) {
+var Atlas = function(game, id) {
+  if(!id) { //If there's none passed in, use Carthage
     id = 314921;
   }
+  this._game = game;
   this._places = [];
   this._placesToFetch = [];
-  this.addLocation(id, 1);
   this._currentPlace = false;
+  this.addLocation(id, 1);
+}
+
+Atlas.prototype.getGame = function() {
+  return this._game;
 }
 
 Atlas.prototype.addLocation = function(id, depth) {
@@ -56,9 +61,10 @@ Atlas.prototype._fetchLocation = function(id, depth) {
 
       thisAtlas.addPlace(id, tmpPlace);
 
-      //Ensure we always have a current place
+      //Ensure we always have a current place and update the status bar
       if(!thisAtlas.getCurrentPlace()) {
         thisAtlas.setCurrentPlace(id);
+        thisAtlas.getGame().displayStatus();
       }
 
       //This place connects with others, fill in the roads section

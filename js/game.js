@@ -2,7 +2,7 @@ var Game = function(screenWidth, screenHeight) {
   this._screenWidth = screenWidth;
   this._screenHeight = screenHeight;
 
-  this._atlas = new Atlas();
+  this._atlas = new Atlas(this);
 
   this._statusbar = new StatusBar(this);
 

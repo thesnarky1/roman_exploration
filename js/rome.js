@@ -24,7 +24,6 @@ var Rome = {
       //Make the game
       this.game = new Game(this.WIDTH, this.HEIGHT);
 
-      //this.scheduler.add(this.game.getPlayer(), true);
       this.engine.start();
     }
   },
